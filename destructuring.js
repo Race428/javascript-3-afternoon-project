@@ -21,7 +21,7 @@ var carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 
-//Code Here
+let {color, make, model, year } = carDetails 
 
 
 
@@ -34,7 +34,7 @@ var carDetails = {
 */
 
 function greeting( obj ) {
-  //Code Here
+ let {firstName, lastName, title} = obj
   
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
@@ -53,12 +53,13 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-//Code Here
-
-
-
+function totalPopulation(states){ 
+ let { utah, california, texas, arizona} = states
+ let sum = utah + california + texas + arizona;
+ return sum 
+}
+console.log(totalPopulation)
 ////////// PROBLEM 4 //////////
-
 /*
   Write a function called ingredients that will take in an object. 
   This object will have 3 properties named carb, fat, and protein. 
@@ -67,7 +68,12 @@ function greeting( obj ) {
   Push these new variables to an array and return the array. 
 */
 
-//Code Here
+function ingredients({carb, fat, protein}){
+let food = []
+food.push(carb,fat,protein)
+return food 
+console.log
+}
 
 
 
@@ -85,9 +91,21 @@ function greeting( obj ) {
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
+function largeNumbers({ first, second, third}) {
 
+  
+  if (first < second && first < third) { 
+    return first
+  }
+  if(second < first && second < third){
+    return second
+  }
+  if(third < first && third < second) { 
+    return third
+  }
 
+  
+}
 
 ////////// PROBLEM 6 //////////
 
@@ -97,6 +115,15 @@ function greeting( obj ) {
   Find the longest array and return that array.
 */
 
-//Code Here
-
+function numberGroups( {a, b, c}) { 
+if(a > b && a > c) {
+  return a
+}
+if ( b > a && b > c) {
+  return b
+}
+if( c > a && c > b) { 
+  return c
+}
+}
 
