@@ -100,12 +100,10 @@ function largeNumbers({ first, second, third}) {
   if(second < first && second < third){
     return second
   }
-  if(third < first && third < second) { 
-    return third
+ return third 
   }
 
   
-}
 
 ////////// PROBLEM 6 //////////
 
