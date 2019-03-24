@@ -11,7 +11,7 @@
 // Do not edit the code below.
 var employees = [
   {
-    "firstName": "Von",
+    'firstName': "Von",
     "lastName": "Budibent",
     "email": "vbudibent0@163.com",
     "department": "Sales"
@@ -50,8 +50,18 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
-
+function employeeUpdater() { 
+   for( i = 0; i < employees.length; i++) {
+      if(employees[i].firstName === 'Theo'){
+        delete employees[i]
+      } else if(employees[i].firstName === 'Lorie') {
+        employees[i].department = 'HR'
+      }
+       }
+       return employees
+      }
+ 
+ 
 
 
 ////////// PROBLEM 2 //////////
@@ -68,8 +78,25 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
 
+// function removeDuplicates( ){ 
+//   let nameNew = workplaceAccidents => workplaceAccidents.filter((vari,index) => names.indexOf(vari) === index)
+// newName(workplaceAccidents); 
+// }
+
+
+// function removeDuplicates () {
+// for(let i = 0; i < workplaceAccidents.length; i++) { 
+//   for( let j = 0 ; j < workplaceAccidents[i].length; j++) { 
+//     if(i === j){
+//       delete j 
+//     }
+//     return workplaceAccidents[i][j]
+   
+//   }
+// }
+// console.log(workplaceAccidents)
+// }
 
 
 ////////// PROBLEM 3 //////////
