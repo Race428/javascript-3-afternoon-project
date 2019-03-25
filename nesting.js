@@ -78,26 +78,20 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-
-// function removeDuplicates( ){ 
-//   let nameNew = workplaceAccidents => workplaceAccidents.filter((vari,index) => names.indexOf(vari) === index)
-// newName(workplaceAccidents); 
-// }
-
-
-// function removeDuplicates () {
-// for(let i = 0; i < workplaceAccidents.length; i++) { 
-//   for( let j = 0 ; j < workplaceAccidents[i].length; j++) { 
-//     if(i === j){
-//       delete j 
-//     }
-//     return workplaceAccidents[i][j]
-   
-//   }
-// }
-// console.log(workplaceAccidents)
-// }
-
+function removeDuplicates(arr){
+  for(let i = arr.length-1; i >= 0; i--) {
+    for(let j = 0; j < arr.length; j++) {
+     if(i !== j) {
+      if(arr[i] === arr[j]) {
+        arr.splice(i,1)
+        // console.log(arr)
+      }
+    }
+  }
+} 
+  return arr
+ 
+} 
 
 ////////// PROBLEM 3 //////////
 
@@ -123,10 +117,12 @@ var cat = {
     2. Assign fluffy2ndFriend the name of Fluffy's 2nd friend.
 */
 
-//Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
 
+
+
+var grumpyActivity = cat.catFriends[0].activities[1];
+var fluffy2ndFriend = cat.catFriends[1].name;
+// console.log(grumpyActivity)
 
 
 ////////// PROBLEM 4 //////////
@@ -165,7 +161,13 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+function recordCleaner(){
+  for( i = 0; i < myCar.accidents.length; i++)
+  if(myCar.accidents[i].atFaultForAccident === true){
+  myCar.accidents[i].atFaultForAccident = false
+  // console.log(myCar)
+}
+}
 
 
 
@@ -184,6 +186,17 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
-
-
+function looper(){
+  for(let i = 0; i < numsArr.length; i++) {
+    for(let j = 0; j < numsArr[i].length; j++){
+      if(numsArr[i][j] % 2 === 0) {
+        numsArr[i][j] = 'even' 
+      } else {
+        numsArr [i][j] = 'odd'
+        console.log(numsArr)
+        }
+        
+      }
+    }
+    return numsArr
+  }
